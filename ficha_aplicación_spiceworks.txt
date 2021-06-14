@@ -1,0 +1,136 @@
+#FICHA
+>Aplicación: Spiceworks.
+
+>Funcionalidad: gestionar una red IT en lo relativo a inventario, monitorización y soporte helpdesk.
+
+>Desarrollador: SpiceWorks, Inc.
+
+
+>Versión: 6.2
+
+>Licencia: gratuita.
+
+>Página web: [SpiceWorks] http://www.spiceworks.com/
+
+ 
+
+#SUMARIO
+*¿QUÉ ES SPICEWORKS?
+*INTERFAZ
+*INVENTARIO
+*INFORMES
+*MONITORIZACION
+*GESTIÓN DE USUARIOS
+*HELPDESK Y PORTAL DEL USUARIO
+*BASE DE DATOS DE CONOCIMIENTO
+*PROVEEDORES
+*LIMITACIONES
+
+
+#¿QUÉ ES SPICEWORKS?
+>La primera aproximación a Spiceworks es debida habitualmente a la necesidad de disponer de un software gratuito para gestionar la red de una empresa: su inventario y monitorización. Spiceworks aparece en Internet en los primeros lugares de los distintos buscadores.
+
+
+>Pero esta herramienta ofrece además otras funcionalidades que la hacen merecedora de ser la aplicación elegida por Miniacademia para ser estudiada y documentada como la más adecuada para gestionar nuestros sistemas, como por ejemplo herramienta helpdesk, base de datos de conocimiento, portal de empleado y contacto con proveedores.
+
+>La interfaz se ejecuta en un entorno web, sobre su propio servidor Apache. Spiceworks está desarrollada en Ruby on Rails y utiliza como base de datos SQL Lite.
+
+>En esta introducción describiremos brevemente las principales características. Junto con posteriores artículos se podrá elaborar un manual de spiceworks.
+
+#INTERFAZ
+>La interfaz se ejecuta en un entorno web, sobre su propio servidor Apache. Spiceworks está desarrollada en Ruby on Rails y utiliza como base de datos SQL Lite.
+
+>El idioma original de la aplicación es el inglés. Nosotros haremos uso del “language pack”de traducción al español “Spanish – Español – Castellano” de Oli G (muchas gracias), disponible en la URL:
+
+>[SpiceWorks Idioma] http://community.spiceworks.com/language_pack/363-spanish-espanol-castellano
+
+>Se debe tener en cuenta que las opciones de menú y texto de la aplicación que nosotros describamos y utilicemos serán las traducidas, no las originales en inglés. Hay que señalar que la traducción no es completa, por lo que muchos apartados siguen apareciendo en el inglés original. En un artículo posterior trataremos la instalación de esta traducción.
+
+
+>Una vez iniciada la sesión en Spiceworks, con un usuario propio de la aplicación, podemos elegir entra las varias opciones de menú, que dan paso a un buen número de opciones secundarias. Las entradas del menú superior son:
+
+>*Comunidad:* Conecta con la comunidad Spiceworks, ofreciendo la posibilidad de acceder a las distintas categorías (seguridad, redes, hardware, Windows, virtualización,…) en las que se debaten dudas y problemas que se presentan a los miembros de la comunidad, y que son respondidas y solucionadas por el resto de miembros. También se tiene acceso a distintos recursos como Howtos, whitepapers, etc… publicados por miembros de la comunidad de los más variados temas, y acceso a páginas de vendedores y comparativas valoradas de infinidad de productos. También se puede acceder a información propia de Spiceworks como extensiones, o formación interna sobre la aplicación.
+
+
+>*Inventario:* permite acceder al dashboard, datos de inventario, mapas de red, informes, y configuración de Spiceworks.
+
+>*Helpdesk:* a través de sus submenús se puede configurar el portal del usuario, y gestionar las incidencias abiertas, cerradas, sin asignar, etc.… del sistema helpdesk de Spiceworks. El resto de submenús son similares al de los anteriores apartados.
+
+>*Purchasing:* contacto con proveedores y valoraciones de productos.
+
+>Como hemos dicho, tanto desde el menú de Inventario como de Helpdesk se puede abrir el panel de configuración. Desde este panel realizaremos la importación e integración de los usuarios del Directorio Activo (si es que lo estamos utilizando en nuestra empresa), la configuración de la monitorización de nuestro sistema y el modo en que queremos recibir las alertas, la configuración del sistema helpdesk, la programación del escaneo de la red, backup de la aplicación, y otros asuntos de gran importancia.
+
+#INVENTARIO
+>La información de nuestra red es obtenida sin necesidad de desplegar agentes en los equipos. Puede descubrir y analizar no sólo servidores y estaciones de trabajo Windows, sino también equipos Linux, Mac OS X, routers, switches (con la posibilidad de acceder vía SNMP), teléfonos IP, impresoras, … todo lo que tenga una IP. Para ello SpiceWorks accede a los dispositivos vía WMI, SNMP ó SSH.
+
+
+>Una vez recopilada la información, mediante un proceso al que se puede configurar la periodicidad, Spiceworks nos permite analizar toda la información sobre hardware, software, parches, licencias,… accesible por categorías.
+
+>También puede utilizarse un agente opcional para hacer un seguimiento de los dispositivos móviles que no se conectan habitualmente a nuestra red.
+
+>Hay un gran número de parámetros configurables en el escaneo de la red: se pueden añadir varias subredes con distinto direccionamiento, la periodicidad puede ir desde diaria a semanal, optar por escaneos incrementales, introducir las credenciales que se deben utilizar en equipos windows, linux, o snmp, y más.
+
+
+ 
+
+>La manera en que podemos acceder a la información del inventario puede ser en forma de iconos, o de exploración. Esta última nos presenta la información recopilada en los escaneos de manera muy granular, ya que permite ir filtrándola con una gran cantidad de menús disponibles.
+
+>Los equipos, las subredes, y la organización lógica de la topología de la red corporativa se presenta de forma intuitiva a través de mapas de red.
+
+#INFORMES
+>En la aplicación existe una serie de informes pre configurados, con la opción de crear nuevos informes a medida. Todos los informes son exportables a PDF, Excel ó csv.  También pueden utilizarse gran cantidad de informes disponibles desde la comunidad Spiceworks. Ejemplos de informes prediseñados son:
+
+
+>1.plicaciones por equipo.
+>2.Todos los tickets cerrados.
+>3.Equipo sin antivirus.
+>4.Eventos recientes.
+>5.Teléfonos IP.
+>6.Compras que aun necesitan aprobación.
+>7.Adaptadores de red instalados en los equipos.
+>8.Uso de ancho de banda.
+
+#ONITORIZACION
+>Al igual que con los informes, existen unas alertas pre configuradas y activadas, y también pueden generarse otros objetos de monitorización a medida a través de la aplicación. Se nos ofrece la posibilidad de que las alertas sólo aparezcan en la aplicación ó también ser enviadas a una dirección de email.
+
+>Ejemplos de alertas:
+>1.Poco espacio en disco.
+>2.Un servicio está en estado “stopped”.
+>3.La	garantía ha expirado.
+>4.Se	está agotando el consumible de una impresora.
+>5.No se accede a un dominio web.
+
+#GESTIÓN DE USUARIOS
+>Spiceworks puede tener su propia base de datos de usuarios, entendidos como los empleados de la empresa, o directamente sincronizar con Active Directory para poder gestionar desde Spiceworks su información. Esto permite una mejor integración con el helpdesk de Spiceworks, porque en ella se puede tener la información de contacto del usuario, su foto, y realizar de esta manera un mejor seguimiento de sus tickets.
+
+#HELPDESK Y PORTAL DEL USUARIO
+>Otro pilar fundamental de Spiceworks es la posibilidad de utilizarlo como herramienta de helpdesk. Permite abrir tickets, asignarlos, realizar un seguimiento de los costes asociados a su resolución…
+
+>Los técnicos pueden ser agrupados en diferentes roles, con distintos privilegios en la gestión de los tickets.
+
+>Los usuarios de la empresa pueden abrir un ticket a través de una llamada al teléfono de helpdesk interno, vía email, o bien entrando en el portal de usuario que ofrece spiceworks, y utilizar el widget de ticketing que debe haberse incluido previamente por el administrador de Spiceworks en el portal de los usuarios.
+
+
+>Una vez recibido el ticket en Spiceworks, este puede ser asignado a alguno de los técnicos, cambiar su prioridad, etc…
+
+>En el portal de usuario, cada trabajador de la empresa podrá comprobar el estado de los tickets helpdesk abiertos, consultar documentos publicados, preferentemente de temas relacionados con el uso de su puesto de trabajo y resolución de las averías más frecuentes, o la información de la empresa que se considere oportuna publicar.
+
+>El portal del usuario es configurable por el administrador de Spiceworks, mediante la inserción de widgets disponibles en el diseñador, publicación de documentos (con editor html incluido), y  pestañas para un mejor diseño de bloques del portal.
+
+#BASE DE DATOS DE CONOCIMIENTO
+>Base de datos de conocimiento para profesionales IT. Como ya hemos señalado, se accede a través de la opción “Comunidad” el menú superior de Spiceworks.
+
+
+>Si se despliega dicho menú, se muestran las categorías IT definidas por Spiceworks: Cloud, Databases, Email, Hardware, Linux, Mobile, Networking, Programming, Security,  Software, Storage, Virtualization, VOIP y Windows. Dentro de ellas se pueden encontrar grupos de discusión y solicitudes de soporte de los miembros de la comunidad, con la posibilidad de suscribirse a cualquiera de los temas de discusión o soporte para recibir en nuestra interfaz de Spiceworks los comentarios que se van añadiendo a nuestras suscripciones.
+
+>Además se puede contactar con empresas de servicios IT, consultar artículos técnicos, encontrar scripts que nos resuelvan alguna necesidad específica,….
+
+#PROVEEDORES
+>A través del menú de “Purchasing”, también se accede a un gran número de los principales proveedores de recursos IT. Se puede realizar una búsqueda de productos por categorías o con un buscador embebido. Por último, se nos ofrece la posibilidad de realizar una comparativa de precios, y consultar la valoración que otros miembros de la comunidad han dado a los productos.
+
+>Existe asimismo la posibilidad de realizar la solicitud de un presupuesto hasta a cinco proveedores, para posteriormente elegir la mejor oferta recibida.
+
+#LIMITACIONES
+>1.La aplicación está diseñada para un parque de equipos con un máximo de 1000 ítems. Al parecer el rendimiento se degrada cuando se va superando este número.
+>2.La interfaz de la aplicación está no está disponible en español. Existe un pack de lenguaje que traduce en gran parte la interfaz al español.
+>3.Dentro de Spiceworks pueden no existir vendedores o empresas de servicios IT  de nuestra zona geográfica.
